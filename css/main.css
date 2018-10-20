@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "D-DIN";
+    src: url("../assets/D-DINCondensed-Bold.otf");
+}
+@font-face {
+    font-family: "sofiaRegular";
+    src: url("../assets/SofiaProRegular.otf");
+}
+@font-face {
+    font-family: "sofiaBold";
+    src: url("../assets/SofiaProBold.otf");
+}
+@font-face {
+    font-family: "sofiaLight";
+    src: url("../assets/SofiaProLight.otf");
+}
+@font-face {
+    font-family: "SuperiorBold";
+    src: url("../assets/SuperiorTitleWeb-Bold.woff");
+}
+@font-face {
+    font-family: "SuperiorLight";
+    src: url("../assets/SuperiorTitleWeb-Light.woff");
+}
+
+:root {
+    --blue: #323A7F;
+    --green: #50D79B;
+  }
+
+body{
+    margin: 0;
+    background-color: #F5F5F3;
+    font-family: "sofiaRegular";
+    overflow-x: hidden;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.green{
+    color: var(--green);
+}
+
+.blue{
+    color: var(--blue);
+}
+
+.self-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section>div>div>h2{
+    font-family: "superiorBold";
+    font-size: 2.5em;
+    width: 70%;
+}
+
+header{
+    display: flex;
+    font-family: "sofiaRegular";
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+
+}
+
+header nav{
+    display: flex;
+    width:70%;
+    justify-content: space-between;
+}
+
+header ul{
+    display: flex;
+}
+header ul:first-child a{
+    color: var(--blue);
+    padding: 0px 30px;
+}
+header :nth-child(2) a{
+    color: var(--green);
+    padding: 0px 20px;
+}
+header :nth-child(2) li:last-child a{
+    color: var(--blue);
+}
+
+.double-column{
+    display: flex;
+}
+
+.double-column>div:first-child{
+    width: 65%;
+}
+.double-column>div:nth-child(2){
+    width: 35%;
+}
+
+.double-column>h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.references>.header{
+    display: flex;
+    justify-content: space-between;
+    color: var(--green);
+    text-transform: uppercase;
+}
+.references>.header>ul{
+    display: flex;
+    align-items: center;
+}
+.circle{
+    background-color: var(--green);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.references{
+    padding: 0px 135px;
+}
+
+.header>ul>li{
+    margin: 0px 10px;
+}
+
+.references>.body{
+    display: flex;
+}
+
+.references>.body>div{
+    padding: 10px;
+    background-color: #FFFFFF;
+    margin: 30px;
+    flex: 0 0 400px;
+}
+.references>.body>div:first-child{
+    margin-left: 0;
+}
