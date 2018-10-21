@@ -26,6 +26,7 @@
 :root {
     --blue: #323A7F;
     --green: #50D79B;
+    --grey: #858585;
   }
 
 body{
@@ -49,6 +50,9 @@ a{
 .blue{
     color: var(--blue);
 }
+h2.blue{
+    font-family: "superiorLight";
+}
 
 .self-center{
     display: flex;
@@ -58,7 +62,7 @@ a{
 
 section>div>div>h2{
     font-family: "superiorBold";
-    font-size: 2.5em;
+    font-size: 3.3em;
     width: 70%;
 }
 
@@ -68,13 +72,49 @@ header{
     justify-content: space-between;
     align-items: center;
     margin: 30px 0px;
-
+    margin-bottom: 100px;
+    padding: 0px 50px;
 }
 
 header nav{
     display: flex;
     width:70%;
     justify-content: space-between;
+}
+header nav ul:first-child li.active{
+    position: relative;
+}
+header nav ul:first-child li.active::before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -16px;
+}
+.green-letter{
+    position: relative;
+    font-family: "sofiaBold";
+    color: var(--green);
+    font-size: 20em;
+}
+.green-letter::after{
+    content: "0";
+    position: absolute;
+    left: -90px;
+    top: -180px;
+    z-index: -1;
+}
+.green-letter::before{
+    content: "3";
+    position: absolute;
+    left: 225px;
+    
 }
 
 header ul{
@@ -94,6 +134,7 @@ header :nth-child(2) li:last-child a{
 
 .double-column{
     display: flex;
+    margin-bottom: 50px;
 }
 
 .double-column>div:first-child{
@@ -102,11 +143,9 @@ header :nth-child(2) li:last-child a{
 .double-column>div:nth-child(2){
     width: 35%;
 }
-
-.double-column>h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.double-column p{
+    color: var(--grey);
+    width: 70%;
 }
 
 .references>.header{
@@ -124,13 +163,19 @@ header :nth-child(2) li:last-child a{
     width: 6px;
     height: 6px;
     border-radius: 50%;
+    opacity: 0.5;
 }
+.circle.active{
+    opacity: 1;
+}
+
 .references{
     padding: 0px 135px;
 }
 
 .header>ul>li{
     margin: 0px 10px;
+    cursor: pointer;
 }
 
 .references>.body{
@@ -138,11 +183,34 @@ header :nth-child(2) li:last-child a{
 }
 
 .references>.body>div{
-    padding: 10px;
+    padding: 50px;
     background-color: #FFFFFF;
     margin: 30px;
     flex: 0 0 400px;
+    box-shadow: #00000038 0px 0px 20px 0px;
 }
+.references>.body>div>h3{
+    margin: 0;
+    font-size: 1.1em;
+}
+.references>.body>div>p{
+    color: var(--grey);
+    margin-bottom: 70px;
+}
+.references>.body>div>a{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.references>.body>div>a::before{
+    content: '';
+    display: block;
+    width: 26px;
+    height: 12px;
+    margin: 0px 10px;
+    background-image: url("../assets/right-arrow-green.svg");
+}
+
 .references>.body>div:first-child{
     margin-left: 0;
 }
